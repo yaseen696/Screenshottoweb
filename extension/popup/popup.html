@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Screenshot to Website</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Screenshot → Website</h2>
+
+    <img id="preview" style="display:none;" />
+
+    <button id="captureBtn">📸 Capture Screenshot</button>
+    <button id="captureFullBtn">📜 Capture Full Page</button>
+
+    <div class="mode-select">
+      <label><input type="radio" name="mode" value="html" checked /> HTML/CSS</label>
+      <label><input type="radio" name="mode" value="react" /> React</label>
+    </div>
+
+    <button id="generateBtn" disabled>⚡ Generate Code</button>
+
+    <div id="status"></div>
+
+    <div id="resultBox" style="display:none;">
+      <textarea id="codeOutput" rows="10" readonly></textarea>
+      <div class="actions">
+        <button id="copyBtn">Copy Code</button>
+        <button id="downloadBtn">Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
